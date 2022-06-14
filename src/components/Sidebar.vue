@@ -17,6 +17,16 @@ const currentRoute = useRoute()
 
 const routes = [
   { title: 'Installation', path: '/' },
-  { title: 'Windows Terminal', path: '/terminal' }
+  { title: 'Windows Terminal', path: '/terminal' },
+  { title: 'Bashrc', path: '/bashrc' },
+  { title: 'Export & Import', path: '/export-import' },
 ]
 </script>
+
+<style lang="scss" scoped>
+  h1 {
+    text-align: center;
+    margin: 12px;
+    font-size: 18px;
+  }
+</style>

@@ -3,10 +3,12 @@ import Sidebar from './components/Sidebar.vue';
 </script>
 
 <template>
-  <div class="app row">
+  <div class="app">
     <Sidebar />
     <div class="app__content">
-      <router-view />
+      <VaContent>
+        <router-view />        
+      </VaContent>
     </div>
   </div>
 </template>
@@ -15,12 +17,23 @@ import Sidebar from './components/Sidebar.vue';
 .app {
   min-height: 100vh;
   height: 100%;
+  display: flex;
   .va-sidebar {
     min-height: 100vh;
   }
 
   &__content {
-    padding: 16px;
+    padding: 32px;
+    box-sizing: border-box;
+    flex: 1 auto;
+
+    .code-snippet {
+      display: block;
+    }
+
+    b {
+      color: var(--va-warning);
+    }
   }
 }
 </style>

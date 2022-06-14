@@ -8,6 +8,8 @@ import {
   VaSidebarItem,
   VaSidebarItemTitle,
   VaSidebarItemContent,
+  VaContent,
+  VaAlert
 } from 'vuestic-ui'
 import 'vuestic-ui/css'
 import { routes } from './routes'
@@ -19,8 +21,17 @@ createApp(App)
       VaSidebar,
       VaSidebarItem,
       VaSidebarItemTitle,
-      VaSidebarItemContent
-    } 
+      VaSidebarItemContent,
+      VaContent,
+      VaAlert
+    },
+    config: {
+      components: {
+        VaButton: {
+          rounded: false,
+        }
+      }
+    }
   }))
   .use(createRouter({
     routes,

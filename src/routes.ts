@@ -2,11 +2,19 @@ import { RouteRecordRaw } from "vue-router";
 
 export const routes: RouteRecordRaw[] = [
   {
-    name: 'Home',
     path: '/',
     component: () => import('./pages/Home.vue'),
-    meta: {
-      title: 'Installation'
-    }
-  }
+  },
+  {
+    path: '/terminal',
+    component: () => import('./pages/Terminal.vue'),
+  },
+  {
+    path: '/bashrc',
+    component: () => import('./pages/Bashrc.vue'),
+  },
+  {
+    path: '/export-import',
+    component: () => import('./pages/ExportImport.vue'),
+  },
 ]
