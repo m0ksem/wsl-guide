@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="en"><head>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&amp;family=Source+Sans+Pro:wght@400;700&amp;display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+    
+    <script type="module" crossorigin="" src="/assets/app.d13d0657.js"></script>
+    <link rel="stylesheet" href="/assets/app.deb3bb03.css">
+  <link rel="modulepreload" crossorigin="" href="/assets/Bashrc.ac64293d.js"></head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="app"><aside class="va-sidebar" style="color:#1B1A1F;background:#f4f8fa;width:16rem;" data-v-778f4abc=""><div class="va-sidebar__menu"><!--[--><h1 data-v-778f4abc="">WSL helper</h1><!--[--><a class="va-sidebar__item va-sidebar-item" style="color:#1B1A1F;" href="/" to="/" data-v-778f4abc=""><!--[--><div class="va-sidebar__item__content va-sidebar-item-content" data-v-778f4abc=""><!--[--><div class="va-sidebar__title va-sidebar-item-title" data-v-778f4abc=""><!--[-->Installation<!--]--></div><!--]--></div><!--]--></a><a class="va-sidebar__item va-sidebar-item" style="color:#1B1A1F;" href="/terminal" to="/terminal" data-v-778f4abc=""><!--[--><div class="va-sidebar__item__content va-sidebar-item-content" data-v-778f4abc=""><!--[--><div class="va-sidebar__title va-sidebar-item-title" data-v-778f4abc=""><!--[-->Windows Terminal<!--]--></div><!--]--></div><!--]--></a><a class="va-sidebar__item va-sidebar-item va-sidebar-item--active" style="color:#ffffff;background-color:#2C82E0;border-color:#2C82E0;" href="/bashrc" to="/bashrc" data-v-778f4abc=""><!--[--><div class="va-sidebar__item__content va-sidebar-item-content" data-v-778f4abc=""><!--[--><div class="va-sidebar__title va-sidebar-item-title" data-v-778f4abc=""><!--[-->Bashrc<!--]--></div><!--]--></div><!--]--></a><a class="va-sidebar__item va-sidebar-item" style="color:#1B1A1F;" href="/export-import" to="/export-import" data-v-778f4abc=""><!--[--><div class="va-sidebar__item__content va-sidebar-item-content" data-v-778f4abc=""><!--[--><div class="va-sidebar__title va-sidebar-item-title" data-v-778f4abc=""><!--[-->Export &amp; Import<!--]--></div><!--]--></div><!--]--></a><!--]--><!--]--></div></aside><div class="app__content"><div class="va-content"><!--[--><!--[--><h1>Bashrc</h1> Open .bashrc with VSCode <code class="code-snippet"> code ~/.bashrc </code><h5>Add git branch name in CLI</h5><code class="code-snippet"> # -------------- COLOR GIT -------------<br> PURPLE_START="\033[37;1;45m"<br> PURPLE_END="\033[0m"<br> NO_COLOR="\[\033[0m\]"<br><br> parse_git_branch() {<br> local git_branch=$(git branch 2&gt; /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')<br> echo $git_branch<br> }<br> PS1="$PURPLE_START\$(parse_git_branch)$PURPLE_END$NO_COLOR${debian_chroot:+($debian_chroot)}\w$ "<br> # --------------------------------------<br></code><!--]--><!--]--></div></div></div></div>
+    
+  
+
+</body></html>
