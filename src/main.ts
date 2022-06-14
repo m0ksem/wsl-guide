@@ -1,5 +1,3 @@
-import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import { 
   createVuesticEssential, 
@@ -11,30 +9,32 @@ import {
   VaContent,
   VaAlert
 } from 'vuestic-ui'
-import 'vuestic-ui/css'
+// Vite-ssg can not handle css, lol
+// import 'vuestic-ui/css'
 import { routes } from './routes'
+import { ViteSSG } from 'vite-ssg'
 
-createApp(App)
-  .use(createVuesticEssential({ 
-    components: { 
-      VaButton,
-      VaSidebar,
-      VaSidebarItem,
-      VaSidebarItemTitle,
-      VaSidebarItemContent,
-      VaContent,
-      VaAlert
-    },
-    config: {
-      components: {
-        VaButton: {
-          rounded: false,
+export const createApp = ViteSSG(
+  App,
+  { routes },
+  ({ app }) => {
+    app.use(createVuesticEssential({ 
+      components: { 
+        VaButton,
+        VaSidebar,
+        VaSidebarItem,
+        VaSidebarItemTitle,
+        VaSidebarItemContent,
+        VaContent,
+        VaAlert
+      },
+      config: {
+        components: {
+          VaButton: {
+            rounded: false,
+          }
         }
       }
-    }
-  }))
-  .use(createRouter({
-    routes,
-    history: createWebHistory(),
-  }))
-  .mount('#app')
+    }))
+  },
+)

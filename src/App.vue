@@ -18,14 +18,17 @@ import Sidebar from './components/Sidebar.vue';
   min-height: 100vh;
   height: 100%;
   display: flex;
+  flex-wrap: nowrap;
   .va-sidebar {
     min-height: 100vh;
+    flex: 0 0 250px;
   }
 
   &__content {
     padding: 32px;
     box-sizing: border-box;
-    flex: 1 auto;
+    flex: 0 0 auto;
+    flex-grow: 1;
 
     .code-snippet {
       display: block;
